@@ -31,3 +31,21 @@
     transform: rotate(360deg);
   }
 }
+
+.both-lists {
+  display: flex;
+  flex-direction: row;
+}
+
+.player-card-button {
+  min-width: 25vw;
+  max-width: 40vw;
+}
+
+.all-players-list {
+  width: 50vw;
+}
+
+.list-of-favs {
+  width: 50vw;
+}
