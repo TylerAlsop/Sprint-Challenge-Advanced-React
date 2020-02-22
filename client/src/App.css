@@ -35,6 +35,7 @@
 .both-lists {
   display: flex;
   flex-direction: row;
+  padding-bottom: 30px;
 }
 
 .player-card-button {

@@ -46,7 +46,7 @@ class App extends Component {
             </div>
             <div className="list-of-favs">
               <h2>Favorite Players</h2>
-              {/* <FavPlayers playersInfo={this.state.favPlayersInfo} /> */}
+              <FavPlayers favPlayersInfo={this.state.favPlayersInfo} />
             </div>
 
           </div>

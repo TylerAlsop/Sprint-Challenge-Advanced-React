@@ -1,11 +1,11 @@
 import React from 'react';
-import PlayerCard from './PlayerCard';
+import FavPlayerCard from './FavPlayerCard';
 
 const PlayerList = props => {
 
     return (
         <div className="player-list">
-            <PlayerCard favPlayersInfo={props.favPlayersInfo} />
+            <FavPlayerCard favPlayersInfo={props.favPlayersInfo} />
         </div>
     );
 };
