@@ -6,7 +6,7 @@ const FavPlayerCard = props => {
         <div className="fav-player-card">
             {props.favPlayersInfo.map(player => (
                 <div key={player.id}>
-                    <button className="player-card-button">
+                    <button className="player-card-button" onClick={this.props.handleClick}>
                         <h3 className="player-name">{player.name}</h3>
                         <p>{player.name} is from {player.country} and has {player.searches} searches.</p>
                     </button>

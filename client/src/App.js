@@ -30,6 +30,10 @@ class App extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
+    this.state.playersInfo.map(player => {
+      return player.favPlayer = false
+    })
+
     console.log("Component Updated. This is the new state:", this.state)
 
   }
