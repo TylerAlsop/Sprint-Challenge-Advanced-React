@@ -9,7 +9,7 @@ But in all actuality it is because of the React Lifecycle. Using the componentDi
 1- constructor(): Initializes local state and binds event handlers
 2- render(): Returns React Elements and utilizes this.props and this.state.
 3- componendDidMount(): Starts right as a component is mounted. Can be used to confirm that the componed mounted and is the best place to load data from remote endpoints like an API call. It can use the data fetched to update the state after the render happens. "Inistialization the requieres DOM nodes should go here." ~reactjs.org
-4- componentDidUpdate(): This is used when something is updated (like state), and a rerender happens.
+4- componentDidUpdate(): This is used when something is updated (like state), and a rerender happens. It is a good place to compare the original state to the updated state.
 5- componentWillUnmount(): Used when the component is being unmounted. It's like a cleanup method to clean up things like network requests, etc.
 
 
