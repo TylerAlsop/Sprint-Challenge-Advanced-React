@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PlayerList from './Components/PlayerList';
-import FavPlayers from './Components/FavPlayers';
+import FavPlayerList from './Components/FavPlayerList';
 import axios from 'axios';
 
 
@@ -11,8 +11,7 @@ class App extends Component {
     console.log("Constructor is getting called!");
     super();
     this.state = {
-      playersInfo: [],
-      favPlayersInfo: []
+      playersInfo: []
     }
   };
 
@@ -50,7 +49,7 @@ class App extends Component {
             </div>
             <div className="list-of-favs">
               <h2>Favorite Players</h2>
-              <FavPlayers favPlayersInfo={this.state.favPlayersInfo} />
+              <FavPlayerList playersInfo={this.state.playersInfo} />
             </div>
 
           </div>
