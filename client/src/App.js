@@ -23,19 +23,28 @@ class App extends Component {
       .then(res => {
         console.log("This is the API Data:", res)
         this.setState({ playersInfo: res.data })
+        this.setState({ withFavKey: [...this.state.playersInfo]})
       })
+        
       .catch(err => console.log("Error with axios call", err))
+
+
 
   }
 
   componentDidUpdate(prevProps, prevState) {
-    this.state.playersInfo.map(player => {
-      return player.favPlayer = false
-    })
-
     console.log("Component Updated. This is the new state:", this.state)
 
-  }
+    this.state.playersInfo.map(player => {
+      return player.favPlayer = true
+    })
+
+    const favPlayerKey = this.state.playersInfo.map(player => {
+      return player.favPlayer
+    })
+
+    console.log("favPlayer? in App.js", favPlayerKey)
+    }
 
   render() {
     return (
@@ -49,7 +58,10 @@ class App extends Component {
             </div>
             <div className="list-of-favs">
               <h2>Favorite Players</h2>
-              <FavPlayerList playersInfo={this.state.playersInfo} />
+              <FavPlayerList 
+                playersInfo={this.state.playersInfo} 
+                favPlayerKey={this.state.playersInfo.map(player => {return player.favPlayer})}
+               />
             </div>
 
           </div>
