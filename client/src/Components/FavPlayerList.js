@@ -11,21 +11,23 @@ const FavPlayerList = props => {
 
 
 
-
-    if (props.favPlayerKey === true) {
-        return (
+    return (
+        <div>
+            {!props.favPlayerKey ? (
             <div className="player-list">
                 <PlayerCard 
                     playersInfo={props.playersInfo}
-                 />
+                />
             </div>
-        );
-    }
-    return (
-        <div>
-
+            ) : (
+            <div>
+    
+            </div>
+        )}
         </div>
+        
     );
+    
 };
 
 export default FavPlayerList

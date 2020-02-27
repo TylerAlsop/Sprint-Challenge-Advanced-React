@@ -36,12 +36,26 @@ class App extends Component {
     console.log("Component Updated. This is the new state:", this.state)
 
     this.state.playersInfo.map(player => {
-      return player.favPlayer = true
+      return player.favPlayer = false
     })
 
     const favPlayerKey = this.state.playersInfo.map(player => {
       return player.favPlayer
     })
+    
+    // const toggleItemCompletion = itemId => {
+    //   this.setState({
+    //     withFavKey: this.state.withFavKey.map(item => {
+    //       if (itemId === item.id) {
+    //         return {
+    //           ...withFavKey, completed: !withFavKey.completed
+    //         };
+    //       }
+
+    //       return item
+    //     })
+    //   })
+    // }
 
     console.log("favPlayer? in App.js", favPlayerKey)
     }
