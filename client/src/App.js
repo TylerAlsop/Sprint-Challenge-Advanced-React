@@ -43,22 +43,25 @@ class App extends Component {
       return player.favPlayer
     })
     
-    // const toggleItemCompletion = itemId => {
-    //   this.setState({
-    //     withFavKey: this.state.withFavKey.map(item => {
-    //       if (itemId === item.id) {
-    //         return {
-    //           ...withFavKey, completed: !withFavKey.completed
-    //         };
-    //       }
 
-    //       return item
-    //     })
-    //   })
-    // }
 
     console.log("favPlayer? in App.js", favPlayerKey)
-    }
+  }
+
+  // toggleFavPlayer = playerId => {
+  //   this.setState({
+  //     withFavKey: this.state.withFavKey.map(player => {
+  //       if (playerId === player.id) {
+  //         return {
+  //           ...withFavKey, 
+  //           favPlayer: !player.favPlayer
+  //         };
+  //       }
+  //       return player
+  //     })
+  //   })
+  // };
+
 
   render() {
     return (
@@ -68,13 +71,18 @@ class App extends Component {
           <div className="both-lists">
             <div className="all-players-list">
               <h2>List of Players</h2>
-              <PlayerList playersInfo={this.state.playersInfo} />
+              <PlayerList 
+                playersInfo={this.state.playersInfo} 
+                // toggleItemCompletion={toggleItemCompletion}
+              />
             </div>
             <div className="list-of-favs">
               <h2>Favorite Players</h2>
               <FavPlayerList 
                 playersInfo={this.state.playersInfo} 
                 favPlayerKey={this.state.playersInfo.map(player => {return player.favPlayer})}
+                // toggleItemCompletion={toggleItemCompletion}
+
                />
             </div>
 

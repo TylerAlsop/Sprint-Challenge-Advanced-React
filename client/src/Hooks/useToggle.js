@@ -5,12 +5,10 @@ export const useToggle = (key, initialValues, cb) => {
 
 
 
-  
+
   const handleClick = e => {
     // console.log(e.target.value);
-    setItems({
-      ...items
-    });
+    e.target = !e.target
     console.log(items);
   };
  

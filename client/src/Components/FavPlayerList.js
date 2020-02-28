@@ -17,6 +17,8 @@ const FavPlayerList = props => {
             <div className="player-list">
                 <PlayerCard 
                     playersInfo={props.playersInfo}
+                    toggleItemCompletion={props.toggleItemCompletion}
+
                 />
             </div>
             ) : (

@@ -6,7 +6,10 @@ const PlayerList = props => {
 
     return (
         <div className="player-list">
-            <PlayerCard playersInfo={props.playersInfo}  />
+            <PlayerCard 
+                playersInfo={props.playersInfo}
+                toggleItemCompletion={props.toggleItemCompletion}
+            />
         </div>
     );
 };
