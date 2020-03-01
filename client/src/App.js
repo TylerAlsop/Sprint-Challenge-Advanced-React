@@ -3,6 +3,8 @@ import PlayerList from './Components/PlayerList';
 import axios from 'axios';
 
 
+
+
 import './App.css';
 
 class App extends Component {
@@ -37,11 +39,10 @@ class App extends Component {
 
 
 
-
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        <header id="App-header">
           <h1 className="page-title">Who Are Your Favorite Players?</h1>
           <div className="both-lists">
             <div className="all-players-list">
@@ -51,8 +52,8 @@ class App extends Component {
               />
             </div>
           </div>
-
         </header>
+
       </div>
     );
   }

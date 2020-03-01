@@ -1,17 +1,10 @@
-import React, {useState} from 'react';
-
-export const makeFavPlayer = (key, initialValues, cb) => {
-  const [items, setItems] = useState([]);
+// import React, {useState, useEffect} from 'react';
+// import useLocalStorage from './useLocalStorage';
 
 
 
-
-  const handleClick = e => {
-    // console.log(e.target.value);
-    e.target = !e.target
-    console.log(items);
-  };
- 
-  
-  return [handleClick];
+export function changeBackground(color) {
+  document.getElementById("App-header").style.backgroundColor = color;
 };
+
+export default changeBackground;
