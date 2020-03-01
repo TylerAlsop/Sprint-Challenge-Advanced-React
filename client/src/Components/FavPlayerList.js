@@ -4,13 +4,6 @@ import PlayerCard from './PlayerCard';
 
 const FavPlayerList = props => {
 
-
-    console.log("playersInfo in FavPlayerList", props.playersInfo)
-
-    console.log("favPlayer? in FavPlayerList", props.favPlayerKey)
-
-
-
     return (
         <div>
             {!props.favPlayerKey ? (

@@ -5,7 +5,6 @@ import changeBackground from '../Hooks/index'
 
 
 const PlayerList = props => {
-    console.log("playersInfo in PlayerList", props.playersInfo)
 
 
     const greenClick = e => {

@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
 import makeFavPlayer from '../Hooks/index'
 
-const PlayerCard = props => {
-    console.log("playersInfo in PlayerCard", props.playersInfo)
-
-    console.log("favPlayer? in PlayerCard", props.favPlayerKey)  
-      
-
+const PlayerCard = props => {  
+    
     return (
         <div className="player-card-container">
             {props.playersInfo.map(player => (
