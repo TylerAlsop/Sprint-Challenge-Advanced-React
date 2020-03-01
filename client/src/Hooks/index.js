@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-export const useToggle = (key, initialValues, cb) => {
+export const makeFavPlayer = (key, initialValues, cb) => {
   const [items, setItems] = useState([]);
 
 

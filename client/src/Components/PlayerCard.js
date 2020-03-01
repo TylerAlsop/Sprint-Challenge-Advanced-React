@@ -1,25 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const PlayerCard = props => {
     console.log("playersInfo in PlayerCard", props.playersInfo)
 
     console.log("favPlayer? in PlayerCard", props.favPlayerKey)  
+
+    const handleClick = e => {
+        e.preventDefault();
+        // makeFavPlayer(!favPlayer)
+
+    }
       
 
     return (
-        <div className="player-card">
+        <div className="player-card-container">
             {props.playersInfo.map(player => (
-                <div key={player.id}>
-                    <button 
-                        className="player-card-button"
-                        onClick={props.toggleItemCompletion}
-                    >
-                        <h3 className="player-name">{player.name}</h3>
-                        <p>{player.name} is from {player.country} and has {player.searches} searches. Is a favPlayer? {player.favPlayer}</p>
-                    </button>
-                </div>
+                <button className="player-card-button" key={player.id} >
+                    <h3 className="player-name">{player.name}</h3>
+                    <p>{player.name} is from {player.country} and has {player.searches} searches.</p>
+                </button>
             ))}
-            
         </div>
     );
 };

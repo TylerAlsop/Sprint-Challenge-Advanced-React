@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PlayerList from './Components/PlayerList';
-import FavPlayerList from './Components/FavPlayerList';
 import axios from 'axios';
 
 
@@ -21,9 +20,8 @@ class App extends Component {
     axios
       .get("http://localhost:5000/api/players")
       .then(res => {
-        console.log("This is the API Data:", res)
+        console.log("This is the API Data:", res.data)
         this.setState({ playersInfo: res.data })
-        this.setState({ withFavKey: [...this.state.playersInfo]})
       })
         
       .catch(err => console.log("Error with axios call", err))
@@ -34,33 +32,10 @@ class App extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     console.log("Component Updated. This is the new state:", this.state)
-
-    this.state.playersInfo.map(player => {
-      return player.favPlayer = false
-    })
-
-    const favPlayerKey = this.state.playersInfo.map(player => {
-      return player.favPlayer
-    })
     
-
-
-    console.log("favPlayer? in App.js", favPlayerKey)
   }
 
-  // toggleFavPlayer = playerId => {
-  //   this.setState({
-  //     withFavKey: this.state.withFavKey.map(player => {
-  //       if (playerId === player.id) {
-  //         return {
-  //           ...withFavKey, 
-  //           favPlayer: !player.favPlayer
-  //         };
-  //       }
-  //       return player
-  //     })
-  //   })
-  // };
+
 
 
   render() {
@@ -73,19 +48,8 @@ class App extends Component {
               <h2>List of Players</h2>
               <PlayerList 
                 playersInfo={this.state.playersInfo} 
-                // toggleItemCompletion={toggleItemCompletion}
               />
             </div>
-            <div className="list-of-favs">
-              <h2>Favorite Players</h2>
-              <FavPlayerList 
-                playersInfo={this.state.playersInfo} 
-                favPlayerKey={this.state.playersInfo.map(player => {return player.favPlayer})}
-                // toggleItemCompletion={toggleItemCompletion}
-
-               />
-            </div>
-
           </div>
 
         </header>

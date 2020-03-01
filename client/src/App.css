@@ -32,24 +32,24 @@
   }
 }
 
-.both-lists {
-  display: flex;
-  flex-direction: row;
-  padding-bottom: 30px;
+.player-card-button {
+  background-color: gray;
+  border: white solid 1px;
+  margin: 10px;
+  border-radius: 10px;
 }
 
-.player-card-button {
-  min-width: 25vw;
-  max-width: 40vw;
+.favorite-player-card-button {
+  background-color: yellow;
+  border: white solid 1px;
+  margin: 10px;
+  border-radius: 10px;
 }
 
 .all-players-list {
   width: 50vw;
 }
 
-.list-of-favs {
-  width: 50vw;
-}
 
 /* .light-mode {
   color: #fff;
