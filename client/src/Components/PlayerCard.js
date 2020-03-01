@@ -17,7 +17,7 @@ const PlayerCard = props => {
             {props.playersInfo.map(player => (
                 <button className="player-card-button" key={player.id} >
                     <h3 className="player-name">{player.name}</h3>
-                    <p>{player.name} is from {player.country} and has {player.searches} searches.</p>
+                    <p>{player.name} is from {player.country} and has been searched {player.searches} times.</p>
                 </button>
             ))}
         </div>
