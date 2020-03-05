@@ -2,13 +2,14 @@
   text-align: center;
 }
 
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
   pointer-events: none;
 }
 
-.App-header {
+#App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -31,3 +32,36 @@
     transform: rotate(360deg);
   }
 }
+
+.player-card-button {
+  background-color: gray;
+  border: white solid 1px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.player-card-button.favorite-player-card-button {
+  background-color: yellow;
+  border: white solid 1px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.all-players-list {
+  width: 50vw;
+}
+
+.green-background {
+  background-color: green;
+}
+
+
+/* .light-mode {
+  color: #fff;
+  background-color: #313843;
+
+  .navbar {
+    background-color: #1F2022;
+    border: none;
+  }
+} */
